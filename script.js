@@ -153,5 +153,5 @@ const getCountryAndNeighbour = function(country) {
 btn.addEventListener('click',()=> {
     const cname=document.querySelector('#search input').value;
     console.log(cname);
-    getCountryAndNeighbour(cname)
+    getCountryAndNeighbour(cname);
 });
