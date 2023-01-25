@@ -119,7 +119,14 @@ NOTE: Without options, Fetch will always act as a get request.
 /* cleaner way using arrow functions */
 const getCountryAndNeighbour = function(country) {
     fetch(`https://restcountries.com/v2/name/${country}`)
-        .then(response => response.json()) //or(response=> {response.json();})
+        .then(response => {
+            console.log(response);
+
+            if(!response.ok)
+                throw new Error('Country not found');
+
+            return response.json();
+        }) //or(response=> {response.json();})
         .then(data => {
             countriesContainer.innerHTML='';
             renderCountries(data[0]);
