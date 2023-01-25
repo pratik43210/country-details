@@ -123,7 +123,7 @@ const getCountryAndNeighbour = function(country) {
             console.log(response);
 
             if(!response.ok)
-                throw new Error('Country not found');
+                throw new Error(`Country not found (${response.status})`);
 
             return response.json();
         }) //or(response=> {response.json();})
