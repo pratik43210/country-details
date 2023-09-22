@@ -153,6 +153,6 @@ const getCountryAndNeighbour = function(country) {
 btn.addEventListener('click',()=> {
     const cname=document.querySelector('#search input').value;
     console.log(cname);
-    if(cname.toLowerCase==='india') getCountryAndNeighbour('bharat');
+    if(cname.toLowerCase()==='india') getCountryAndNeighbour('bharat');
     else getCountryAndNeighbour(cname);
 });
